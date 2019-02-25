@@ -41,7 +41,7 @@
       "$IMPROVER_ACC_TEST_DIR/wxcode/global/probability_of_snowfall_rate.nc" \
       "$IMPROVER_ACC_TEST_DIR/wxcode/global/probability_of_visibility_at_screen_level.nc" \
       "$IMPROVER_ACC_TEST_DIR/wxcode/global/probability_of_cloud_area_fraction.nc" \
-      "$IMPROVER_ACC_TEST_DIR/wxcode/global/probability_of_cloud_area_fraction_assuming_only_consider_surface_to_1000_feet_asl.nc" \
+      "$IMPROVER_ACC_TEST_DIR/wxcode/global/probability_of_low_type_cloud_area_fraction.nc" \
       "$TEST_DIR/output.nc"
   [[ "$status" -eq 0 ]]
 
