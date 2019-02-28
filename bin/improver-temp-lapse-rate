@@ -98,7 +98,7 @@ def main():
         msg = 'Neighbourhood radius specified is less than zero.'
         raise ValueError(msg)
 
-    temperature_cube = load_cube(args.temperature_filepath)
+    temperature_cube = load_cube(args.temperature_filepath, lazy_load=True)
 
     if args.return_dalr:
         result = temperature_cube.copy(
@@ -106,8 +106,8 @@ def main():
         result.rename('air_temperature_lapse_rate')
         result.units = U_DALR.units
     else:
-        orography_cube = load_cube(args.orography_filepath)
-        land_sea_mask_cube = load_cube(args.land_sea_mask_filepath)
+        orography_cube = load_cube(args.orography_filepath, lazy_load=True)
+        land_sea_mask_cube = load_cube(args.land_sea_mask_filepath, lazy_load=True)
         result = LapseRate(
             max_height_diff=args.max_height_diff,
             nbhood_radius=args.nbhood_radius,
